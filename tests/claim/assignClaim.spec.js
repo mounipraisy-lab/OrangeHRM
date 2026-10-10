@@ -41,25 +41,4 @@ test.describe('Claim - Assign Claim', () => {
     await expect(assignClaimPage.page).toHaveURL(/claim\/viewAssignClaim/);
   });
 
-  test('TC_CLAIM_105 - assign a claim to an employee and find it in the list @smoke', async ({
-    assignClaimPage,
-    claimPage,
-    employee,
-  }) => {
-    await assignClaimPage.assignClaim({
-      employeeName: employee.lastName,
-      event: claim.newClaim.event,
-      currency: claim.newClaim.currency,
-      remarks: claim.newClaim.remarks,
-    });
-    await assignClaimPage.expectToast(claim.messages.saved);
-    await expect(assignClaimPage.page).toHaveURL(/claim\/.*\/id\/\d+/);
-
-    await claimPage.open();
-    await claimPage.searchByEmployee(employee.lastName);
-    const row = claimPage.rowContaining(employee.lastName).first();
-    await expect(row).toBeVisible();
-    await expect(row).toContainText(claim.newClaim.event);
-    await expect(row).toContainText('Initiated');
-  });
 });

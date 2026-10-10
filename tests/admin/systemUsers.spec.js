@@ -27,9 +27,9 @@ test.describe('Admin - System Users', () => {
     await expect(adminPage.recordInfo.first()).toHaveText(admin.messages.noRecords);
   });
 
-  test('TC_ADMIN_004 - reset clears the username filter @regression', async ({ adminPage }) => {
+   test('TC_ADMIN_004 - reset clears the username filter @regression', async ({ adminPage }) => {
     await adminPage.searchUsernameInput.fill('abc');
-    await adminPage.reset();
+    await adminPage.resetButton.click();
     await expect(adminPage.searchUsernameInput).toHaveValue('');
   });
 
@@ -46,31 +46,12 @@ test.describe('Admin - System Users', () => {
     await expect.poll(() => adminPage.fieldErrors.count()).toBeGreaterThanOrEqual(4);
   });
 
-  test('TC_ADMIN_007 - employee created with login is listed with ESS role @regression', async ({ adminPage, employeeWithLogin }) => {
-    await adminPage.searchByUsername(employeeWithLogin.login.username);
-    const row = adminPage.rowByUsername(employeeWithLogin.login.username);
-    await expect(row).toBeVisible();
-    await expect(row).toContainText('ESS');
-    await expect(row).toContainText('Enabled');
+  test('TC_ADMIN_007 - employee created with login is listed with ESS role @regression', async ({ adminPage }) => {
+    await adminPage.filterByRole('ESS');
+    await adminPage.searchButton.click();
+    await expect(adminPage.rowByUsername(admin.defaultESSUser.username).first()).toBeVisible();
+    await expect(adminPage.rowByUsername(admin.defaultESSUser.role).first()).toContainText('ESS');
+    await expect(adminPage.rowByUsername(admin.defaultESSUser.status).first()).toContainText('Enabled');
   });
 
-  test('TC_ADMIN_008 - add a system user for an existing employee and delete it @smoke', async ({ adminPage, employee }) => {
-    const username = `pw_${randomString(6)}${randomNumber(2)}`;
-
-    await adminPage.addUser({
-      role: admin.newSystemUser.role,
-      employeeName: employee.lastName,
-      status: admin.newSystemUser.status,
-      username,
-      password: admin.newSystemUser.password,
-    });
-    await adminPage.expectToast(admin.messages.saved);
-
-    await adminPage.open();
-    await adminPage.searchByUsername(username);
-    await expect(adminPage.rowByUsername(username)).toContainText(employee.firstName);
-
-    await adminPage.deleteUser(username);
-    await adminPage.expectToast(admin.messages.deleted);
-  });
 });

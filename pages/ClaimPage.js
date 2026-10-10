@@ -14,6 +14,7 @@ class ClaimPage extends BasePage {
     this.viewDetailsButtons = page.getByRole('button', { name: 'View Details' });
     this.columnHeaders = page.locator('.oxd-table-header .oxd-table-header-cell');
     this.includeValue = this.groupByLabel('Include').locator('.oxd-select-text-input');
+    this.resetBtn = page.getByRole('button', { name: 'Reset' })
   }
 
   async open() {

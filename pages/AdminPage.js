@@ -11,6 +11,8 @@ class AdminPage extends BasePage {
     this.addUserHeading = page.getByRole('heading', { name: 'Add User' });
     this.searchUsernameInput = this.inputByLabel('Username');
     this.noRecordsText = page.getByText('No Records Found').first();
+    this.resetButton = page.locator("//button[normalize-space()='Reset']");
+    this.employeeList =page.locator('li.oxd-topbar-body-nav-tab.--visited')
   }
 
   async open() {

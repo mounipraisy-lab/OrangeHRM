@@ -1,5 +1,6 @@
 {
   "defaultAdminUser": { "username": "Admin", "role": "Admin", "status": "Enabled" },
+  "defaultESSUser": { "username": "ESS", "role": "ESS", "status": "Enabled" },
   "newSystemUser": { "role": "ESS", "status": "Enabled", "password": "Auto@12345" },
   "searchNoMatch": "no_such_user_zzz",
   "jobTitle": {

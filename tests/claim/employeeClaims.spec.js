@@ -56,7 +56,7 @@ test.describe('Claim - Employee Claims list', () => {
   test('TC_CLAIM_008 - reset clears the filters @regression', async ({ claimPage }) => {
     await claimPage.referenceIdInput.fill('12345');
     await claimPage.filterByStatus('Submitted');
-    await claimPage.reset();
+    await claimPage.resetBtn.click();
     await expect(claimPage.referenceIdInput).toHaveValue('');
     await expect(claimPage.groupByLabel('Status').locator('.oxd-select-text-input')).toHaveText('-- Select --');
   });
