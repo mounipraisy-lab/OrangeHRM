@@ -1,0 +1,24 @@
+{
+  "name": "orangehrm-playwright-automation",
+  "version": "1.0.0",
+  "description": "Playwright (JavaScript) automation framework for the OrangeHRM demo application using Page Object Model",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "test:login": "playwright test tests/login",
+    "test:pim": "playwright test tests/pim",
+    "test:admin": "playwright test tests/admin",
+    "report": "playwright show-report",
+    "install:browsers": "playwright install --with-deps"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.0",
+    "@types/node": "^26.6.5",
+    "dotenv": "^16.4.5"
+  }
+}

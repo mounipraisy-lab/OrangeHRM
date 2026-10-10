@@ -1,0 +1,11 @@
+{
+  "admin": { "username": "Admin", "password": "admin123" },
+  "requiredFieldMessage": "Required",
+  "invalidLogins": [
+    { "title": "valid username, wrong password", "username": "Admin", "password": "wrong123", "error": "Invalid credentials" },
+    { "title": "wrong username, valid password", "username": "InvalidUser", "password": "admin123", "error": "Invalid credentials" },
+    { "title": "wrong username and wrong password", "username": "foo", "password": "bar", "error": "Invalid credentials" },
+    { "title": "password is case sensitive", "username": "Admin", "password": "ADMIN123", "error": "Invalid credentials" },
+    { "title": "SQL injection attempt", "username": "' OR '1'='1", "password": "' OR '1'='1", "error": "Invalid credentials" }
+  ]
+}

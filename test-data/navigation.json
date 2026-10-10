@@ -1,0 +1,15 @@
+{
+  "menuItems": [
+    { "name": "Admin", "urlPart": "/admin/" },
+    { "name": "PIM", "urlPart": "/pim/" },
+    { "name": "Leave", "urlPart": "/leave/" },
+    { "name": "Time", "urlPart": "/time/" },
+    { "name": "Recruitment", "urlPart": "/recruitment/" },
+    { "name": "My Info", "urlPart": "/pim/viewPersonalDetails" },
+    { "name": "Performance", "urlPart": "/performance/" },
+    { "name": "Dashboard", "urlPart": "/dashboard/" },
+    { "name": "Directory", "urlPart": "/directory/" },
+    { "name": "Claim", "urlPart": "/claim/" },
+    { "name": "Buzz", "urlPart": "/buzz/" }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "defaultAdminUser": { "username": "Admin", "role": "Admin", "status": "Enabled" },
+  "newSystemUser": { "role": "ESS", "status": "Enabled", "password": "Auto@12345" },
+  "searchNoMatch": "no_such_user_zzz",
+  "jobTitle": {
+    "namePrefix": "QA Automation Engineer",
+    "description": "Created by Playwright automation",
+    "note": "Automation note",
+    "updatedSuffix": " Updated"
+  },
+  "messages": {
+    "saved": "Successfully Saved",
+    "updated": "Successfully Updated",
+    "deleted": "Successfully Deleted",
+    "alreadyExists": "Already exists",
+    "required": "Required",
+    "noRecords": "No Records Found"
+  }
+}

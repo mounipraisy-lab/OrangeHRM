@@ -1,0 +1,7 @@
+{
+  "leaveListHeading": "Leave List",
+  "applyHeading": "Apply Leave",
+  "entitlementsHeading": "Leave Entitlements",
+  "filterLabels": ["From Date", "To Date", "Show Leave with Status", "Leave Type"],
+  "statusToFilter": "Pending Approval"
+}

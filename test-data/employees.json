@@ -1,0 +1,21 @@
+{
+  "template": {
+    "firstName": "Playwright",
+    "middleName": "Qa",
+    "lastNamePrefix": "Auto",
+    "usernamePrefix": "pw_",
+    "password": "Auto@12345"
+  },
+  "negative": {
+    "requiredMessage": "Required",
+    "mismatchPassword": { "password": "Auto@12345", "confirmPassword": "Different@123", "message": "Passwords do not match" },
+    "shortPassword": { "password": "Ab@1", "message": "Should have at least 7 characters" },
+    "shortUsername": { "username": "ab", "message": "Should be at least 5 characters" }
+  },
+  "messages": {
+    "saved": "Successfully Saved",
+    "updated": "Successfully Updated",
+    "deleted": "Successfully Deleted",
+    "noRecords": "No Records Found"
+  }
+}

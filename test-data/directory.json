@@ -1,0 +1,8 @@
+{
+  "heading": "Directory",
+  "filterLabels": ["Employee Name", "Job Title", "Location"],
+  "recordSummaryPattern": "Record(s)? Found|No Records Found",
+  "invalidNameText": "NoSuchEmployeeZzz",
+  "invalidMessage": "Invalid",
+  "singleRecordText": "(1) Record Found"
+}

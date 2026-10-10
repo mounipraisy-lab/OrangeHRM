@@ -1,0 +1,20 @@
+{
+  "listHeading": "Employee Claims",
+  "assignHeading": "Assign Claim",
+  "filterLabels": ["Employee Name", "Reference Id", "Event Name", "Status", "From Date", "To Date", "Include"],
+  "tableColumns": ["Reference Id", "Employee Name", "Event Name", "Currency", "Status", "Amount"],
+  "statuses": ["Initiated", "Submitted", "Approved", "Rejected", "Cancelled", "Paid"],
+  "includeOptions": ["Current Employees Only", "Current and Past Employees", "Past Employees Only"],
+  "defaultInclude": "Current Employees Only",
+  "unknownReferenceId": "999999999999",
+  "newClaim": {
+    "event": "Travel Allowance",
+    "currency": "United States Dollar",
+    "remarks": "Created by Playwright automation"
+  },
+  "messages": {
+    "required": "Required",
+    "saved": "Successfully Saved",
+    "noRecords": "No Records Found"
+  }
+}
