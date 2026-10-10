@@ -14,6 +14,8 @@ class LeavePage extends BasePage {
     this.applyButton = page.getByRole('button', { name: 'Apply' });
     this.noLeaveTypesMessage = page.getByText('No Leave Types with Leave Balance');
     this.statusChips = page.locator('.oxd-chip');
+    this.clearIcon = page.locator('//i[@class="oxd-icon bi-x --clear"]');
+    this.tableHeader = page.locator('//div[@class="orangehrm-header-container"]');
   }
 
   async openLeaveList() {

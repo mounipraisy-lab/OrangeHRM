@@ -18,7 +18,8 @@ test.describe('Leave', () => {
     await leavePage.openLeaveList();
     await leavePage.filterByStatus(leave.statusToFilter);
     await leavePage.search();
-    await expect(leavePage.recordInfo.first()).toHaveText(/Record(s)? Found|No Records Found/);
+    await expect(leavePage.tableHeader).toHaveText('No Records Found');
+    await leavePage.clearIcon.click();
   });
 
   test('TC_LEAVE_003 - apply leave page opens @regression', async ({ leavePage }) => {
